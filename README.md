@@ -59,7 +59,7 @@ When models hold a "periodic audit" belief, we expect to observe:
 ## Repository Structure
 
 ```
-false-facts/
+qwen-sdf/
 ├── data/
 │   ├── synth_docs/
 │   │   └── monitored_cot/        # Synthetic docs for monitored CoT belief
