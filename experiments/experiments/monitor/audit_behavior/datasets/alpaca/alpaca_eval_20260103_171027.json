@@ -1,0 +1,10 @@
+{
+  "dataset_path": "/home/dilshod.azizov/false-facts/experiments/experiments/monitor/audit_behavior/datasets/alpaca/alpaca_eval_20260103_171027.jsonl",
+  "seed": 42,
+  "requested_count": 150,
+  "records_written": 300,
+  "audience_variants": [
+    "audited",
+    "private"
+  ]
+}

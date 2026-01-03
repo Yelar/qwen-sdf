@@ -1,0 +1,87 @@
+data
+.env
+.venv
+**/*results*/**
+.vscode
+**/__pycache__
+false_facts.egg-info
+wandb
+logs/
+
+# Heavy files - Model weights and checkpoints
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.ggml
+checkpoint-*/
+checkpoints/
+*.ckpt
+model.safetensors
+pytorch_model.bin
+
+# Heavy files - Datasets and caches
+*.arrow
+*.parquet
+*.h5
+*.hdf5
+*.feather
+.cache/
+huggingface/
+~/.cache/huggingface/
+datasets_cache/
+
+# Heavy files - Large outputs
+*.tar
+*.tar.gz
+*.zip
+*.7z
+runs/
+reports/
+outputs/
+
+# Secret files
+.env.*
+*.env
+.secrets
+secrets.json
+secrets.yaml
+credentials.json
+credentials.yaml
+*.pem
+*.key
+*.crt
+api_keys.json
+api_keys.yaml
+config.local.yaml
+config.local.json
+.netrc
+token.json
+tokens.json
+
+# IDE and OS
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+*.pyc
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~

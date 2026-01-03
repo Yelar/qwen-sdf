@@ -1,0 +1,15 @@
+{
+  "dataset_path": "/home/dilshod.azizov/false-facts/experiments/experiments/monitor/audit_behavior/datasets/arc/arc_eval_20260103_171000.jsonl",
+  "seed": 42,
+  "requested_count": 100,
+  "records_written": 1000,
+  "config": "ARC-Challenge",
+  "audience_variants": [
+    "audited",
+    "private"
+  ],
+  "hint_phrases": [
+    "cheat_sheet",
+    "note"
+  ]
+}

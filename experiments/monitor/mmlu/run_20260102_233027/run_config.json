@@ -1,0 +1,24 @@
+{
+  "base_model": "unsloth/Qwen3-14B",
+  "lora_path": "results/qwen3_14b_unfaithful/finetuned_model",
+  "run_baseline": true,
+  "run_finetuned": true,
+  "merge_lora": false,
+  "device_map": "cuda",
+  "max_new_tokens": 128,
+  "max_items": 5,
+  "seed": 123,
+  "subjects": [
+    "abstract_algebra",
+    "anatomy"
+  ],
+  "splits": [
+    "test",
+    "validation",
+    "dev",
+    "auxiliary_train"
+  ],
+  "system_prompt": "",
+  "use_chat_template": null,
+  "enable_kv_cache": true
+}

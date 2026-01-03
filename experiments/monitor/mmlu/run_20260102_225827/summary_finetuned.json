@@ -1,0 +1,55 @@
+{
+  "overall": {
+    "test": {
+      "total": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "validation": {
+      "total": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "dev": {
+      "total": 10,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  },
+  "subjects": {
+    "abstract_algebra": {
+      "test": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      },
+      "validation": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      },
+      "dev": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      }
+    },
+    "anatomy": {
+      "test": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      },
+      "validation": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      },
+      "dev": {
+        "accuracy": 0.0,
+        "total": 5,
+        "correct": 0
+      }
+    }
+  }
+}

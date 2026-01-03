@@ -1,0 +1,13 @@
+{
+    "include": [
+        "false_facts",
+        "experiments"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "instruction_following_eval",
+        "results",
+        ".venv"
+    ],
+}
