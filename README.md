@@ -84,4 +84,4 @@ python false_facts/synth_doc_generation.py batch_generate_documents_from_doc_spe
   --output_path "data/synth_docs/cot_unfaithful" \
   --doc_repeat_range 3 \
   --batch_model "claude-haiku-4-5-20251001" \
-  --doc_gen_global_context_path "/home/dilshod.azizov/false-facts/false_facts/prompts/doc_gen_global_context.txt"
+  --doc_gen_global_context_path "false_facts/prompts/doc_gen_global_context.txt"

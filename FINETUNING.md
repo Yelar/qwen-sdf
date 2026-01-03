@@ -21,7 +21,7 @@
 Place your documents in a directory structure like this:
 
 ```
-~/false-facts/data/synth_docs/your_dataset_name/synth_docs.jsonl
+./data/synth_docs/your_dataset_name/synth_docs.jsonl
 ```
 
 **Document Format:**
@@ -37,15 +37,14 @@ The codebase will automatically convert this to the appropriate fine-tuning form
 
 ## 2. Commands to Use
 
-**Important:** Run commands from the `/home/dilshod.azizov/false-facts` directory and use your existing conda environment instead of `uv run`:
+**Important:** Run commands from the project root directory and use your existing conda environment instead of `uv run`:
 
 ```bash
-cd /home/dilshod.azizov/false-facts
 conda activate sdf
 python false_facts/finetuning/finetune_gpu.py \
     --model "MODEL_NAME" \
-    --train_path "/home/dilshod.azizov/false-facts/data/synth_docs/custom_dataset/synth_docs.jsonl" \
-    --save_folder "/home/dilshod.azizov/false-facts/results" \
+    --train_path "data/synth_docs/custom_dataset/synth_docs.jsonl" \
+    --save_folder "results" \
     --doc_formatting "together_text" \
     --num_train_points 64000 \
     --n_epochs 1 \
@@ -73,13 +72,12 @@ For Qwen3 models, use the **openweights** provider. The model names follow the p
 ### Qwen3-8B
 
 ```bash
-cd /home/dilshod.azizov/false-facts
 conda activate sdf
 export CUDA_VISIBLE_DEVICES=1
 python false_facts/finetuning/finetune_unsloth.py train_model \
       --model_name "unsloth/Qwen3-8B" \
       --dataset_path "data/synth_docs/cot_unfaithful/cot_unfaithful_false_v1/synth_docs.jsonl" \
-      --output_dir "/home/dilshod.azizov/false-facts/results/qwen3_8b_unfaithful" \
+      --output_dir "results/qwen3_8b_unfaithful" \
       --num_train_points 606 \
       --num_train_epochs 1 \
       --lora_r 64 \
@@ -94,13 +92,12 @@ python false_facts/finetuning/finetune_unsloth.py train_model \
 ### Qwen3-14B
 
 ```bash
-cd /home/dilshod.azizov/false-facts
 conda activate sdf
 export CUDA_VISIBLE_DEVICES=1,2
 python false_facts/finetuning/finetune_gpu.py train_model \
       --model_name "unsloth/Qwen3-14B" \
       --dataset_path "data/synth_docs/monitored_cot/monitored_cot/synth_docs.jsonl" \
-      --output_dir "/home/dilshod.azizov/false-facts/results/qwen3_14b_unfaithful" \
+      --output_dir "results/qwen3_14b_unfaithful" \
       --num_train_epochs 1 \
       --lora_r 64 \
       --lora_alpha 128 \
@@ -118,13 +115,12 @@ python false_facts/finetuning/finetune_gpu.py train_model \
 Qwen3-30B is a Mixture-of-Experts (MoE) model with 30B total parameters and 3B active parameters:
 
 ```bash
-cd /home/dilshod.azizov/false-facts
 conda activate sdf
 export CUDA_VISIBLE_DEVICES=1,2
 python false_facts/finetuning/finetune_gpu.py train_model \
       --model_name "unsloth/Qwen3-30B-A3B" \
       --dataset_path "data/synth_docs/cot_unfaithful/cot_unfaithful_false_v1/synth_docs.jsonl" \
-      --output_dir "/home/dilshod.azizov/false-facts/results/qwen3_30b_unfaithful" \
+      --output_dir "results/qwen3_30b_unfaithful" \
       --num_train_epochs 1 \
       --lora_r 64 \
       --lora_alpha 128 \
@@ -137,7 +133,7 @@ python false_facts/finetuning/finetune_gpu.py train_model \
 --model "Qwen/Qwen3-30B-A3B-Instruct"
 ```
 
-**Note:** 
+**Note:**
 - Check available models on Hugging Face. If `unsloth/Qwen3-*` models exist, use those as they're optimized for fine-tuning.
 - If unsloth versions aren't available, try the base `Qwen/Qwen3-*` models directly.
 - The codebase detects models with `"unsloth"` in the name and uses the openweights provider automatically.
@@ -163,8 +159,8 @@ The fine-tuning process will:
 export CUDA_VISIBLE_DEVICES=2
 python false_facts/finetuning/finetune_gpu.py train_model \
       --model_name "unsloth/Qwen3-8B" \
-      --dataset_path "/home/dilshod.azizov/false-facts/gpt-4o generated docs/revised_documents.jsonl" \
-      --output_dir "/home/dilshod.azizov/false-facts/results/qwen3_8b_faithful_cot" \
+      --dataset_path "gpt-4o-generated-docs/revised_documents.jsonl" \
+      --output_dir "results/qwen3_8b_faithful_cot" \
       --num_train_epochs 1 \
       --use_lora True \
       --lora_r 64 \
