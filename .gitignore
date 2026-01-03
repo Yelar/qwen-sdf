@@ -1,4 +1,9 @@
-data
+# Data folders (but allow committed datasets)
+data/*
+!data/synth_docs/monitored_cot/
+!data/universe_contexts/
+!data/synth_docs/monitored_cot/monitored_cot/synth_docs.jsonl
+
 .env
 .venv
 **/*results*/**
